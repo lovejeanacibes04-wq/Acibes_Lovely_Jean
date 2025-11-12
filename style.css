@@ -25,36 +25,52 @@ body {
   padding-bottom: 80px;
 }
 
-/* Navbar */
+/* ===== NAVBAR ===== */
 .navbar {
-  grid-column: 1 / 6;
-  background:#ff90eb;
-  padding: 15px;
+  width: 100%;
+  background: #ff90eb;
+  padding: 15px 10px;
   border-radius: 5px;
-  grid-gap: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* allows it to wrap if screen is too narrow */
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  justify-content: right;
- 
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap; /* ensures items move neatly if space is tight */
+  gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar li {
-  margin: 0 15px;
-  
+  margin: 0;
 }
 
 .navbar a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.navbar li:nth-child(1){
-  position: absolute;
-  left: 20px;
+.navbar a:hover {
+  background-color: #ffe3f7;
+  color: #ff009d;
 }
 
 
@@ -95,6 +111,14 @@ body {
   font-size: 22px;
   color: #ff009d;
   display: flex;
+  text-decoration: none;
+}
+
+.text-section h2 a{
+  font-size: 22px;
+  color: #ff009d;
+  display: flex;
+  text-decoration: none;
 }
 
 /* Quote */
@@ -146,35 +170,21 @@ body {
     gap: 20px;
   }
 
-  /* Navbar simplified */
   .navbar {
-    width: 100%;
-    background: #ff52df;
-    padding: 12px 0;
-    border-radius: 0;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    padding: 12px;
   }
 
   .navbar ul {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 10px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
   }
 
-  .navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    display: inline-block;
-    padding: 8px;
-  }
-
-  .navbar ul li a:hover {
-    color: #ffe3f7;
+  .navbar a {
+    padding: 10px 12px;
+    font-size: 14px;
   }
 
   /* Profile Image */
